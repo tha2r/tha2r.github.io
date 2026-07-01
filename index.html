@@ -35,6 +35,7 @@
       <li><a href="#resume"><i class="bi bi-file-earmark-text"></i><span class="nav-label">Resume</span></a></li>
       <li><a href="#services"><i class="bi bi-grid"></i><span class="nav-label">Services</span></a></li>
       <li><a href="#contact"><i class="bi bi-envelope"></i><span class="nav-label">Contact</span></a></li>
+      <li><a href="javascript:void(0)" id="themeToggle"><i class="bi bi-moon"></i><span class="nav-label">Theme</span></a></li>
     </ul>
     <div class="sidebar-social">
       <div class="social-icons">
@@ -622,6 +623,25 @@
   <button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="bi bi-arrow-up"></i></button>
 
   <script>
+    /* Theme Toggle */
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle.querySelector('i');
+    if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light-mode');
+      themeIcon.classList.replace('bi-moon', 'bi-brightness-high');
+    }
+    themeToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('light-mode');
+      if (document.body.classList.contains('light-mode')) {
+        localStorage.setItem('theme', 'light');
+        themeIcon.classList.replace('bi-moon', 'bi-brightness-high');
+      } else {
+        localStorage.setItem('theme', 'dark');
+        themeIcon.classList.replace('bi-brightness-high', 'bi-moon');
+      }
+    });
+
     /* Sidebar toggle (mobile) */
     const sidebar = document.getElementById('sidebar');
     const sidebarToggle = document.getElementById('sidebarToggle');
