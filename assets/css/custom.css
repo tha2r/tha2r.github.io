@@ -46,6 +46,18 @@ img { max-width: 100%; display: block; }
   font-size: 1.8rem; font-weight: 800; color: var(--bright);
   text-decoration: none;
 }
+.top-lang {
+  position: fixed; top: 24px; right: 32px; z-index: 1000;
+  font-size: 0.9rem; font-weight: 600; color: var(--dim);
+  text-decoration: none; transition: all .3s;
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  padding: 8px 16px; border-radius: 50px;
+  background: var(--bg-glass); border: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+.top-lang:hover {
+  background: var(--accent); color: #fff; border-color: var(--accent);
+}
 .dot-nav {
   position: fixed; top: 50%; right: 32px; transform: translateY(-50%); z-index: 1000;
 }
@@ -346,6 +358,8 @@ html { scroll-behavior: smooth; scroll-snap-type: y mandatory; overflow-y: scrol
 }
 
 /* =================== RTL SUPPORT =================== */
+html[dir="rtl"] .top-logo { left: auto; right: 32px; }
+html[dir="rtl"] .top-lang { right: auto; left: 32px; }
 html[dir="rtl"] .dot-nav { right: auto; left: 20px; }
 html[dir="rtl"] .dot-nav a .label { right: auto; left: 36px; transform: translateX(-15px); }
 html[dir="rtl"] .dot-nav a:hover .label, html[dir="rtl"] .dot-nav a.active .label { transform: translateX(0); }
