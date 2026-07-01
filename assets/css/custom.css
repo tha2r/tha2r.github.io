@@ -8,23 +8,6 @@
 :root {
   --sidebar-w: 64px;
   --sidebar-w-open: 240px;
-  --bg: #0a0a0f;
-  --sidebar-bg: rgba(10,10,15,0.95);
-  --bg-card: rgba(255,255,255,0.04);
-  --bg-glass: rgba(255,255,255,0.06);
-  --border: rgba(255,255,255,0.08);
-  --accent: #6c63ff;
-  --accent-2: #00d4aa;
-  --glow: rgba(108,99,255,0.35);
-  --text: #e4e4e7;
-  --dim: #9ca3af;
-  --bright: #ffffff;
-  --gap: 100px;
-  --r: 16px;
-  --font: 'Inter', system-ui, sans-serif;
-}
-
-body.light-mode {
   --bg: #f8fafc;
   --sidebar-bg: rgba(255,255,255,0.95);
   --bg-card: #ffffff;
@@ -36,6 +19,23 @@ body.light-mode {
   --text: #334155;
   --dim: #64748b;
   --bright: #0f172a;
+  --gap: 100px;
+  --r: 16px;
+  --font: 'Inter', system-ui, sans-serif;
+}
+
+body.dark-mode {
+  --bg: #0a0a0f;
+  --sidebar-bg: rgba(10,10,15,0.95);
+  --bg-card: rgba(255,255,255,0.04);
+  --bg-glass: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.08);
+  --accent: #6c63ff;
+  --accent-2: #00d4aa;
+  --glow: rgba(108,99,255,0.35);
+  --text: #e4e4e7;
+  --dim: #9ca3af;
+  --bright: #ffffff;
 }
 
 html { scroll-behavior: smooth; }
