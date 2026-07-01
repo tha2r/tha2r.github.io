@@ -43,9 +43,14 @@ img { max-width: 100%; display: block; }
 .sidebar-logo {
   font-size: 1.4rem; font-weight: 800; color: var(--bright);
   white-space: nowrap; margin-bottom: 40px; letter-spacing: -0.5px;
-  padding: 0 18px; width: 100%; text-align: center;
+  padding: 0; width: 100%; text-align: center;
+  position: relative; display: flex; justify-content: center; align-items: center; height: 32px;
 }
-.sidebar-logo span { color: var(--accent); }
+.sidebar-logo .logo-full span { color: var(--accent); }
+.sidebar-logo .logo-short { opacity: 1; transition: opacity 0.25s; position: absolute; }
+.sidebar-logo .logo-full { opacity: 0; transition: opacity 0.25s; position: absolute; pointer-events: none; }
+.sidebar:hover .logo-short, .sidebar.open .logo-short { opacity: 0; pointer-events: none; }
+.sidebar:hover .logo-full, .sidebar.open .logo-full { opacity: 1; pointer-events: auto; }
 .sidebar-nav { list-style: none; width: 100%; flex: 1; }
 .sidebar-nav li { position: relative; }
 .sidebar-nav a {
