@@ -344,3 +344,10 @@ html { scroll-behavior: smooth; scroll-snap-type: y mandatory; overflow-y: scrol
   .info-grid { grid-template-columns: 1fr; }
   .modal-box { padding: 28px 20px; }
 }
+
+/* =================== RTL SUPPORT =================== */
+html[dir="rtl"] .dot-nav { right: auto; left: 20px; }
+html[dir="rtl"] .dot-nav a .label { right: auto; left: 36px; transform: translateX(-15px); }
+html[dir="rtl"] .dot-nav a:hover .label, html[dir="rtl"] .dot-nav a.active .label { transform: translateX(0); }
+html[dir="rtl"] .info-item strong { min-width: 120px; }
+html[dir="rtl"] .nav-arrows { right: auto; left: 22px; }
