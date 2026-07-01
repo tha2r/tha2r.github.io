@@ -641,6 +641,23 @@
       navAs.forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#' + cur); });
     });
 
+    /* Mouse wheel fullpage scroll */
+    let isScrolling = false;
+    window.addEventListener('wheel', (e) => {
+      if (window.innerWidth <= 768) return; // Let mobile scroll naturally
+      e.preventDefault();
+      if (isScrolling) return;
+      const dir = e.deltaY > 0 ? 1 : -1;
+      let cur = 0;
+      sections.forEach((s, i) => { if (window.scrollY >= s.offsetTop - 100) cur = i; });
+      let next = cur + dir;
+      if (next >= 0 && next < sections.length) {
+        isScrolling = true;
+        sections[next].scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => isScrolling = false, 1000);
+      }
+    }, { passive: false });
+
     /* Scroll top button */
     const scrollBtn = document.getElementById('scrollTop');
     window.addEventListener('scroll', () => scrollBtn.classList.toggle('visible', scrollY > 400));
