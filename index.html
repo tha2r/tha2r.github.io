@@ -659,6 +659,13 @@
     navUp.addEventListener('click', () => scrollDir(-1));
     navDown.addEventListener('click', () => scrollDir(1));
     
+    window.addEventListener('keydown', (e) => {
+      const active = document.activeElement;
+      if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA')) return;
+      if (e.key === 'ArrowUp') { e.preventDefault(); scrollDir(-1); }
+      if (e.key === 'ArrowDown') { e.preventDefault(); scrollDir(1); }
+    });
+
     window.addEventListener('scroll', () => {
       let cur = 0;
       sections.forEach((s, i) => { if (window.scrollY >= s.offsetTop - 100) cur = i; });
