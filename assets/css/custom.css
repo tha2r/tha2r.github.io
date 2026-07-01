@@ -144,11 +144,11 @@ img { max-width: 100%; display: block; }
 .hero-image-frame {
   border-radius: var(--r); overflow: hidden;
   border: 4px solid var(--border); box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-  max-width: 280px; margin: 0 auto;
+  max-width: 240px; margin: 0 auto;
 }
-.hero-image-frame img { width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 3 / 4; }
+.hero-image-frame img { width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 2 / 3; }
 @media (min-width: 900px) {
-  .hero-grid { grid-template-columns: 320px 1fr; gap: 60px; }
+  .hero-grid { grid-template-columns: 280px 1fr; gap: 60px; }
   .hero-image-frame { margin: 0; max-width: none; border-radius: calc(var(--r) * 2); }
 }
 .hero-greeting {
