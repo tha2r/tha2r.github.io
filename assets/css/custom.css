@@ -76,7 +76,7 @@ img { max-width: 100%; display: block; }
 .dot-nav a:hover .theme-dot i { color: #fff; }
 
 /* =================== MAIN CONTENT =================== */
-html { scroll-behavior: smooth; overflow-y: scroll; }
+html { scroll-behavior: smooth; scroll-snap-type: y mandatory; overflow-y: scroll; }
 .main-content { margin-left: 0; min-height: 100vh; width: 100%; }
 
 .section { padding: var(--gap) 0; position: relative; min-height: 100vh; display: flex; flex-direction: column; }
@@ -315,17 +315,18 @@ html { scroll-behavior: smooth; overflow-y: scroll; }
 .footer { padding: 36px 0; text-align: center; border-top: 1px solid var(--border); }
 .footer p { font-size: .82rem; color: var(--dim); }
 
-/* =================== SCROLL TOP =================== */
-.scroll-top {
+/* Section Nav Arrows */
+.nav-arrows {
   position: fixed; bottom: 22px; right: 22px; z-index: 99;
-  width: 42px; height: 42px; border-radius: 50%;
-  background: var(--accent); color: #fff; border: none;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer; opacity: 0; pointer-events: none;
-  transition: opacity .3s, transform .3s; font-size: 1.1rem;
+  display: flex; flex-direction: column; gap: 8px;
 }
-.scroll-top.visible { opacity: 1; pointer-events: auto; }
-.scroll-top:hover { transform: translateY(-3px); }
+.nav-arrows button {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: var(--bg-glass); border: 1px solid var(--border); color: var(--bright);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all .3s; backdrop-filter: blur(8px); font-size: 1.1rem;
+}
+.nav-arrows button:hover { background: var(--accent); color: #fff; border-color: var(--accent); transform: scale(1.1); }
 
 /* =================== REVEAL =================== */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }

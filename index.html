@@ -610,7 +610,10 @@
     </div>
   </div>
 
-  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="bi bi-arrow-up"></i></button>
+  <div class="nav-arrows">
+    <button id="navUp" aria-label="Previous Section"><i class="bi bi-chevron-up"></i></button>
+    <button id="navDown" aria-label="Next Section"><i class="bi bi-chevron-down"></i></button>
+  </div>
 
   <script>
     /* Theme Toggle */
@@ -641,27 +644,29 @@
       navAs.forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#' + cur); });
     });
 
-    /* Mouse wheel fullpage scroll */
-    let isScrolling = false;
-    window.addEventListener('wheel', (e) => {
-      if (window.innerWidth <= 768) return; // Let mobile scroll naturally
-      e.preventDefault();
-      if (isScrolling) return;
-      const dir = e.deltaY > 0 ? 1 : -1;
+    /* Section Up/Down Buttons */
+    const navUp = document.getElementById('navUp');
+    const navDown = document.getElementById('navDown');
+    
+    function scrollDir(dir) {
       let cur = 0;
       sections.forEach((s, i) => { if (window.scrollY >= s.offsetTop - 100) cur = i; });
       let next = cur + dir;
       if (next >= 0 && next < sections.length) {
-        isScrolling = true;
         sections[next].scrollIntoView({ behavior: 'smooth' });
-        setTimeout(() => isScrolling = false, 1000);
       }
-    }, { passive: false });
-
-    /* Scroll top button */
-    const scrollBtn = document.getElementById('scrollTop');
-    window.addEventListener('scroll', () => scrollBtn.classList.toggle('visible', scrollY > 400));
-    scrollBtn.addEventListener('click', () => scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+    navUp.addEventListener('click', () => scrollDir(-1));
+    navDown.addEventListener('click', () => scrollDir(1));
+    
+    window.addEventListener('scroll', () => {
+      let cur = 0;
+      sections.forEach((s, i) => { if (window.scrollY >= s.offsetTop - 100) cur = i; });
+      navUp.style.opacity = cur > 0 ? '1' : '0';
+      navUp.style.pointerEvents = cur > 0 ? 'auto' : 'none';
+      navDown.style.opacity = cur < sections.length - 1 ? '1' : '0';
+      navDown.style.pointerEvents = cur < sections.length - 1 ? 'auto' : 'none';
+    });
 
     /* Reveal on scroll */
     const observer = new IntersectionObserver(entries => {
