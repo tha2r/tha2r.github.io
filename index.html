@@ -19,31 +19,20 @@
 
 <body>
 
-  <!-- Mobile Toggle -->
-  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle menu"><i class="bi bi-list"></i></button>
+  <a href="#hero" class="top-logo">T<span style="color:var(--accent);">.</span></a>
 
-  <!-- ======= Sidebar ======= -->
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-profile">
-      <img src="assets/img/profile-img.jpg" alt="Thaer Alhanafi" class="profile-img">
-      <h1 class="profile-name"><a href="#hero">Thaer Alhanafi</a></h1>
-      <div class="social-icons">
-        <a href="https://x.com/mrtha2r" aria-label="X"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://facebook.com/tha2r" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://instagram.com/mrtha2r" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://linkedin.com/in/tha2r" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-      </div>
-    </div>
-    <ul class="sidebar-nav" id="sidebarNav">
-      <li><a href="#hero" class="active"><i class="bi bi-house"></i><span class="nav-label">Home</span></a></li>
-      <li><a href="#about"><i class="bi bi-person"></i><span class="nav-label">About</span></a></li>
-      <li><a href="#skills"><i class="bi bi-bar-chart"></i><span class="nav-label">Skills</span></a></li>
-      <li><a href="#resume"><i class="bi bi-file-earmark-text"></i><span class="nav-label">Resume</span></a></li>
-      <li><a href="#services"><i class="bi bi-grid"></i><span class="nav-label">Services</span></a></li>
-      <li><a href="#contact"><i class="bi bi-envelope"></i><span class="nav-label">Contact</span></a></li>
-      <li><a href="javascript:void(0)" id="themeToggle"><i class="bi bi-moon"></i><span class="nav-label">Theme</span></a></li>
+  <!-- ======= Dot Navigation ======= -->
+  <nav class="dot-nav" id="dotNav">
+    <ul>
+      <li><a href="#hero" class="active"><span class="label">Home</span><span class="dot"></span></a></li>
+      <li><a href="#about"><span class="label">About</span><span class="dot"></span></a></li>
+      <li><a href="#skills"><span class="label">Skills</span><span class="dot"></span></a></li>
+      <li><a href="#resume"><span class="label">Resume</span><span class="dot"></span></a></li>
+      <li><a href="#services"><span class="label">Services</span><span class="dot"></span></a></li>
+      <li><a href="#contact"><span class="label">Contact</span><span class="dot"></span></a></li>
+      <li><a href="javascript:void(0)" id="themeToggle"><span class="label">Theme</span><span class="dot theme-dot"><i class="bi bi-moon" style="font-size:10px; display:flex; align-items:center; justify-content:center; height:100%;"></i></span></a></li>
     </ul>
-  </aside>
+  </nav>
 
   <!-- ======= Main Content ======= -->
   <div class="main-content">
@@ -640,15 +629,9 @@
       }
     });
 
-    /* Sidebar toggle (mobile) */
-    const sidebar = document.getElementById('sidebar');
-    const sidebarToggle = document.getElementById('sidebarToggle');
-    sidebarToggle.addEventListener('click', () => sidebar.classList.toggle('open'));
-    sidebar.querySelectorAll('.sidebar-nav a').forEach(a => a.addEventListener('click', () => sidebar.classList.remove('open')));
-
     /* Active nav highlight */
-    const sections = document.querySelectorAll('section[id]');
-    const navAs = document.querySelectorAll('.sidebar-nav a');
+    const sections = document.querySelectorAll('.section[id]');
+    const navAs = document.querySelectorAll('.dot-nav a');
     window.addEventListener('scroll', () => {
       let cur = '';
       sections.forEach(s => { if (scrollY >= s.offsetTop - 200) cur = s.id; });
