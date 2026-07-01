@@ -107,50 +107,49 @@
           <h2 class="section-title">Technical Skills</h2>
           <p class="section-sub">A versatile technical skillset spanning development, administration, and security.</p>
         </div>
-        <div class="skills-grid reveal">
-          <div class="glass skill-item">
-            <div class="skill-header"><span>Linux & Windows Admin</span><em>95%</em></div>
+          <div class="glass skill-item" data-modal="modal-skill-sysadmin">
+            <div class="skill-header"><span>Systems Administration</span><em>95%</em></div>
             <div class="skill-bar">
               <div class="skill-fill" data-width="95"></div>
             </div>
           </div>
-          <div class="glass skill-item">
+          <div class="glass skill-item" data-modal="modal-skill-virtualization">
             <div class="skill-header"><span>Virtualization (PVE, ESXi)</span><em>90%</em></div>
             <div class="skill-bar">
               <div class="skill-fill" data-width="90"></div>
             </div>
           </div>
-          <div class="glass skill-item">
+          <div class="glass skill-item" data-modal="modal-skill-php">
             <div class="skill-header"><span>PHP & Web Development</span><em>95%</em></div>
             <div class="skill-bar">
               <div class="skill-fill" data-width="95"></div>
             </div>
           </div>
-          <div class="glass skill-item">
+          <div class="glass skill-item" data-modal="modal-skill-pentest">
             <div class="skill-header"><span>Penetration Testing</span><em>85%</em></div>
             <div class="skill-bar">
               <div class="skill-fill" data-width="85"></div>
             </div>
           </div>
-          <div class="glass skill-item">
+          <div class="glass skill-item" data-modal="modal-skill-db">
             <div class="skill-header"><span>Database Administration </span><em>95%</em></div>
             <div class="skill-bar">
               <div class="skill-fill" data-width="95"></div>
             </div>
           </div>
-          <div class="glass skill-item">
+          <div class="glass skill-item" data-modal="modal-skill-ir">
             <div class="skill-header"><span>Incident Response & Forensics</span><em>85%</em></div>
             <div class="skill-bar">
               <div class="skill-fill" data-width="85"></div>
             </div>
           </div>
-          <div class="glass skill-item">
+          <div class="glass skill-item" data-modal="modal-skill-scripting">
             <div class="skill-header"><span>Scripting & Automation</span><em>95%</em></div>
             <div class="skill-bar">
               <div class="skill-fill" data-width="95"></div>
             </div>
           </div>
-          <div class="glass skill-item">
+          <div class="glass skill-item" data-modal="modal-skill-architecture">
             <div class="skill-header"><span>System Architecture & Design</span><em>90%</em></div>
             <div class="skill-bar">
               <div class="skill-fill" data-width="90"></div>
@@ -445,6 +444,135 @@
       </ul>
       <div class="modal-cta"><a href="#contact" class="btn-primary" onclick="closeAllModals()"><i
             class="bi bi-envelope"></i> Discuss Your Project</a></div>
+    </div>
+  </div>
+
+  <!-- Skills Modals -->
+  <div class="modal-overlay" id="modal-skill-sysadmin">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+      <div class="modal-icon"><i class="bi bi-terminal"></i></div>
+      <h2>Systems Administration</h2>
+      <p>15+ years of managing high-availability environments across enterprise organizations.</p>
+      <ul>
+        <li><i class="bi bi-check-circle-fill"></i> Advanced Linux & Windows Server Management</li>
+        <li><i class="bi bi-check-circle-fill"></i> Performance Tuning & Resource Optimization</li>
+        <li><i class="bi bi-check-circle-fill"></i> Secure Configuration & Hardening</li>
+        <li><i class="bi bi-check-circle-fill"></i> Deep Troubleshooting & Log Analysis</li>
+      </ul>
+      <div class="modal-cta"><a href="#contact" class="btn-primary" onclick="closeAllModals()"><i class="bi bi-envelope"></i> Discuss Your Project</a></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-skill-virtualization">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+      <div class="modal-icon"><i class="bi bi-hdd-stack"></i></div>
+      <h2>Virtualization (PVE, ESXi)</h2>
+      <p>Designing scalable, isolated, and fault-tolerant virtualized infrastructures.</p>
+      <ul>
+        <li><i class="bi bi-check-circle-fill"></i> Proxmox VE & VMware ESXi Architecture</li>
+        <li><i class="bi bi-check-circle-fill"></i> High Availability (HA) Cluster Setup</li>
+        <li><i class="bi bi-check-circle-fill"></i> Storage Area Networks & Distributed Storage</li>
+        <li><i class="bi bi-check-circle-fill"></i> Automated Backup & Snapshot Management</li>
+      </ul>
+      <div class="modal-cta"><a href="#contact" class="btn-primary" onclick="closeAllModals()"><i class="bi bi-envelope"></i> Discuss Your Project</a></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-skill-php">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+      <div class="modal-icon"><i class="bi bi-code-slash"></i></div>
+      <h2>PHP & Web Development</h2>
+      <p>Building secure, scalable, and complex full-stack web applications from the ground up.</p>
+      <ul>
+        <li><i class="bi bi-check-circle-fill"></i> Secure Coding Practices & Vulnerability Prevention</li>
+        <li><i class="bi bi-check-circle-fill"></i> Custom MVC Architecture & API Development</li>
+        <li><i class="bi bi-check-circle-fill"></i> Responsive UI/UX Implementation</li>
+        <li><i class="bi bi-check-circle-fill"></i> Complex Business Logic Integration</li>
+      </ul>
+      <div class="modal-cta"><a href="#contact" class="btn-primary" onclick="closeAllModals()"><i class="bi bi-envelope"></i> Discuss Your Project</a></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-skill-pentest">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+      <div class="modal-icon"><i class="bi bi-shield-lock"></i></div>
+      <h2>Penetration Testing</h2>
+      <p>Proactively identifying and exploiting vulnerabilities before attackers can leverage them.</p>
+      <ul>
+        <li><i class="bi bi-check-circle-fill"></i> Web Application Penetration Testing (OWASP)</li>
+        <li><i class="bi bi-check-circle-fill"></i> Network & Infrastructure Auditing</li>
+        <li><i class="bi bi-check-circle-fill"></i> Privilege Escalation & Exploit Crafting</li>
+        <li><i class="bi bi-check-circle-fill"></i> Detailed Reporting & Remediation Guidance</li>
+      </ul>
+      <div class="modal-cta"><a href="#contact" class="btn-primary" onclick="closeAllModals()"><i class="bi bi-envelope"></i> Discuss Your Project</a></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-skill-db">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+      <div class="modal-icon"><i class="bi bi-database-check"></i></div>
+      <h2>Database Administration</h2>
+      <p>Architecting and optimizing enterprise-grade database solutions to ensure data integrity and speed.</p>
+      <ul>
+        <li><i class="bi bi-check-circle-fill"></i> Oracle, MySQL, MariaDB, & PostgreSQL</li>
+        <li><i class="bi bi-check-circle-fill"></i> Redis In-Memory Caching & Performance Tuning</li>
+        <li><i class="bi bi-check-circle-fill"></i> Complex Query Optimization & Indexing</li>
+        <li><i class="bi bi-check-circle-fill"></i> Replication, Clustering, & Data Recovery</li>
+      </ul>
+      <div class="modal-cta"><a href="#contact" class="btn-primary" onclick="closeAllModals()"><i class="bi bi-envelope"></i> Discuss Your Project</a></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-skill-ir">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+      <div class="modal-icon"><i class="bi bi-search"></i></div>
+      <h2>Incident Response & Forensics</h2>
+      <p>Rapidly addressing active threats and performing deep forensic analysis on compromised systems.</p>
+      <ul>
+        <li><i class="bi bi-check-circle-fill"></i> Threat Hunting & Malware Analysis</li>
+        <li><i class="bi bi-check-circle-fill"></i> Intrusion Detection & Log Auditing</li>
+        <li><i class="bi bi-check-circle-fill"></i> Post-Breach Containment & Eradication</li>
+        <li><i class="bi bi-check-circle-fill"></i> Digital Forensics & Attack Vector Tracing</li>
+      </ul>
+      <div class="modal-cta"><a href="#contact" class="btn-primary" onclick="closeAllModals()"><i class="bi bi-envelope"></i> Discuss Your Project</a></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-skill-scripting">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+      <div class="modal-icon"><i class="bi bi-cpu"></i></div>
+      <h2>Scripting & Automation</h2>
+      <p>Eliminating manual effort through robust automation and intelligent script design.</p>
+      <ul>
+        <li><i class="bi bi-check-circle-fill"></i> Bash, Python, & System Shell Scripting</li>
+        <li><i class="bi bi-check-circle-fill"></i> Automated Server Provisioning & Maintenance</li>
+        <li><i class="bi bi-check-circle-fill"></i> Cron-based Monitoring & Self-Healing Tasks</li>
+        <li><i class="bi bi-check-circle-fill"></i> Custom Tooling for Penetration Testing</li>
+      </ul>
+      <div class="modal-cta"><a href="#contact" class="btn-primary" onclick="closeAllModals()"><i class="bi bi-envelope"></i> Discuss Your Project</a></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-skill-architecture">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+      <div class="modal-icon"><i class="bi bi-diagram-3"></i></div>
+      <h2>System Architecture & Design</h2>
+      <p>Designing robust, scalable infrastructures tailored for high-demand, secure applications.</p>
+      <ul>
+        <li><i class="bi bi-check-circle-fill"></i> Network Segmentation & Zero-Trust Design</li>
+        <li><i class="bi bi-check-circle-fill"></i> High Availability & Load Balancing</li>
+        <li><i class="bi bi-check-circle-fill"></i> Scalable Microservices & Monolithic Structures</li>
+        <li><i class="bi bi-check-circle-fill"></i> Cost-to-Performance Optimization</li>
+      </ul>
+      <div class="modal-cta"><a href="#contact" class="btn-primary" onclick="closeAllModals()"><i class="bi bi-envelope"></i> Discuss Your Project</a></div>
     </div>
   </div>
 
