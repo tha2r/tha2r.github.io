@@ -68,7 +68,7 @@ img { max-width: 100%; display: block; }
 .dot-nav .theme-dot { background: transparent; border: 1px solid var(--dim); }
 .dot-nav .theme-dot i { font-size: 10px; color: var(--dim); transition: color .3s; }
 
-.dot-nav a:hover .label { opacity: 1; transform: translateX(0); }
+.dot-nav a:hover .label, .dot-nav a.active .label { opacity: 1; transform: translateX(0); }
 .dot-nav a:hover .dot, .dot-nav a.active .dot {
   background: var(--accent); transform: scale(1.3);
 }
@@ -76,7 +76,7 @@ img { max-width: 100%; display: block; }
 .dot-nav a:hover .theme-dot i { color: #fff; }
 
 /* =================== MAIN CONTENT =================== */
-html { scroll-snap-type: y proximity; overflow-y: scroll; }
+html { scroll-behavior: smooth; scroll-snap-type: y mandatory; overflow-y: scroll; }
 .main-content { margin-left: 0; min-height: 100vh; width: 100%; }
 
 .section { padding: var(--gap) 0; position: relative; scroll-snap-align: start; min-height: 100vh; display: flex; flex-direction: column; }
